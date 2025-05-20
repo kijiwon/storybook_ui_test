@@ -1,7 +1,7 @@
 import React from "react";
 import { rest } from "msw";
 import { InboxScreen } from "./InboxScreen";
-import { Default as TaskListDefault } from "./components/TaskList.stories";
+import { Default as TaskListDefault } from "./TaskList.stories";
 
 export default {
   component: InboxScreen,

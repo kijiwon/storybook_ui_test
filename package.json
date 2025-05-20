@@ -7,6 +7,7 @@
     "@chakra-ui/react": "^1.6.0",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
+    "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -21,14 +22,15 @@
     "build": "SKIP_PREFLIGHT_CHECK=true react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
     "chromatic": "npx chromatic --project-token=chpt_b8294c7ddc35fa1"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:storybook/recommended"
     ],
     "overrides": [
       {
@@ -54,17 +56,29 @@
     ]
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^6.5.3",
-    "@storybook/addon-essentials": "^6.5.3",
-    "@storybook/addon-links": "^6.5.3",
-    "@storybook/builder-webpack5": "^6.5.3",
-    "@storybook/manager-webpack5": "^6.5.3",
-    "@storybook/node-logger": "^6.5.3",
-    "@storybook/preset-create-react-app": "^4.1.0",
-    "@storybook/react": "^6.5.3",
+    "@storybook/addon-actions": "^8.6.14",
+    "@storybook/addon-essentials": "^8.6.14",
+    "@storybook/addon-interactions": "^8.6.14",
+    "@storybook/addon-links": "^8.6.14",
+    "@storybook/addon-onboarding": "^8.6.14",
+    "@storybook/blocks": "^8.6.14",
+    "@storybook/builder-webpack5": "^8.6.14",
+    "@storybook/jest": "^0.2.3",
+    "@storybook/manager-webpack5": "^6.5.16",
+    "@storybook/node-logger": "^8.6.14",
+    "@storybook/preset-create-react-app": "^8.6.14",
+    "@storybook/react": "^8.6.14",
+    "@storybook/react-webpack5": "^8.6.14",
+    "@storybook/test": "^8.6.14",
+    "@storybook/test-runner": "^0.22.0",
+    "@storybook/testing-library": "^0.2.2",
     "chromatic": "^11.28.2",
+    "eslint-plugin-storybook": "^0.12.0",
     "msw": "^2.8.4",
-    "msw-storybook-addon": "^2.0.4"
+    "msw-storybook-addon": "^2.0.4",
+    "prop-types": "^15.8.1",
+    "storybook": "^8.6.14",
+    "webpack": "^5.99.8"
   },
   "msw": {
     "workerDirectory": [
